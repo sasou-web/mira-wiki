@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Installer sur Mac · Mira wiki</title>
+  <meta name="description" content="Installer Mira sur un Mac avec l’image disque ou Homebrew, l’autoriser la première fois, et la laisser se mettre à jour.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/fr/mac/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/mac/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/mac/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/mac/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Installer sur Mac">
+  <meta property="og:description" content="Installer Mira sur un Mac avec l’image disque ou Homebrew, l’autoriser la première fois, et la laisser se mettre à jour.">
+  <meta property="og:url" content="https://wiki.miracinema.app/fr/mac/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+  <link rel="preload" href="../../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/wiki.css">
+  <script src="../../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copier" data-copied="Copié" data-none="Rien trouvé pour">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Wiki de Mira, accueil"><img src="../../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/">Site</a>
+      <a href="https://miracinema.app/#download">Télécharger</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../../mac/" hreflang="en" lang="en">EN</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#search"/></svg><span class="visually-hidden">Chercher dans le wiki</span><input type="search" placeholder="Chercher…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Mac</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Bien démarrer</p><ul><li><a href="../">Bienvenue</a></li><li><a href="../windows/">Windows</a></li><li><a href="./" aria-current="page">Mac</a></li><li><a href="../iphone/">iPhone et iPad</a></li></ul></li><li><p class="group">Ton serveur</p><ul><li><a href="../jellyfin/">Préparer Jellyfin</a></li><li><a href="../sign-in/">Se connecter</a></li><li><a href="../away/">Hors de chez toi</a></li></ul></li><li><p class="group">Regarder</p><ul><li><a href="../library/">Ta bibliothèque</a></li><li><a href="../player/">Le lecteur</a></li><li><a href="../subtitles/">Audio et sous-titres</a></li><li><a href="../together/">Regarder ensemble</a></li></ul></li><li><p class="group">Aide</p><ul><li><a href="../settings/">Réglages</a></li><li><a href="../privacy/">Vie privée</a></li><li><a href="../troubleshooting/">Dépannage</a></li><li><a href="../faq/">Questions</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Bien démarrer</p>
+        <h1>Installer sur Mac</h1>
+        <p class="lede">Installer Mira sur un Mac avec l’image disque ou Homebrew, l’autoriser la première fois, et la laisser se mettre à jour.</p>
+        <ul class="platforms" aria-label="Pour"><li>macOS 15 ou plus récent</li><li>puce Apple</li></ul>
+      </header>
+      <nav class="toc" aria-label="Sur cette page"><p>Sur cette page</p><ol><li><a href="#avec-l-image-disque">Avec l’image disque</a></li><li><a href="#avec-homebrew">Avec Homebrew</a></li><li><a href="#autoriser-mira-la-premiere-fois">Autoriser Mira la première fois</a></li><li><a href="#premiere-connexion">Première connexion</a></li><li><a href="#mises-a-jour">Mises à jour</a></li><li><a href="#trackpad">Trackpad</a></li><li><a href="#repartir-de-zero">Repartir de zéro</a></li></ol></nav>
+      <article class="prose">
+<p>Mira pour Mac lit ta bibliothèque Jellyfin avec le même lecteur mpv que sous Windows. Il lui faut un Mac à puce Apple (M1 ou plus récent) sous macOS 15 Sequoia ou plus récent, et un serveur Jellyfin que tu as déjà : Mira pour Mac n’installe pas Jellyfin.</p>
+<h2 id="avec-l-image-disque">Avec l’image disque<a class="anchor" href="#avec-l-image-disque" aria-label="Lien vers cette partie">#</a></h2>
+<ol><li>Télécharge <a href="https://github.com/sasou-web/Mira/releases/download/v0.9.4/Mira-0.9.4-mac-arm64.dmg" rel="noopener">Mira-0.9.4-mac-arm64.dmg</a>.</li><li>Ouvre-la et fais glisser <strong>Mira</strong> sur <strong>Applications</strong>.</li><li>Ouvre Mira depuis Applications. macOS l’arrête la première fois : voir plus bas.</li></ol>
+<h2 id="avec-homebrew">Avec Homebrew<a class="anchor" href="#avec-homebrew" aria-label="Lien vers cette partie">#</a></h2>
+<p>Si tu utilises <a href="https://brew.sh" rel="noopener">Homebrew</a>, une commande dans le Terminal remplace les étapes 1 et 2 :</p>
+<div class="code"><pre data-language="sh"><code>brew install --cask sasou-web/mira/mira</code></pre></div>
+<p>Elle vient du tap de Mira, <a href="https://github.com/sasou-web/homebrew-mira" rel="noopener">sasou-web/homebrew-mira</a> : le catalogue principal de Homebrew n’accepte que les apps notarisées par Apple. Homebrew vérifie le SHA-256 de l’image et garde la protection de macOS : la première ouverture se fait comme ci-dessous. Mira se met ensuite à jour seule ; <code>brew uninstall --cask --zap mira</code> la retire avec ses réglages.</p>
+<h2 id="autoriser-mira-la-premiere-fois">Autoriser Mira la première fois<a class="anchor" href="#autoriser-mira-la-premiere-fois" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira n’est pas signée par un compte développeur Apple payant : macOS ne peut pas la vérifier et refuse de l’ouvrir la première fois. Une seule fois :</p>
+<ol><li>Ouvre Mira, puis ferme le message.</li><li>Va dans <strong>Réglages Système → Confidentialité et sécurité</strong>.</li><li>En bas, à côté de « Mira a été bloquée », clique sur <strong>Ouvrir quand même</strong>, puis confirme.</li></ol>
+<p>Si macOS dit que Mira est « endommagée », ou si le bouton n’apparaît pas, tape ceci dans le Terminal :</p>
+<div class="code"><pre data-language="sh"><code>xattr -dr com.apple.quarantine /Applications/Mira.app</code></pre></div>
+<p>Elle retire seulement de Mira la marque « téléchargé depuis Internet ». Elle ne change aucun réglage de sécurité de ton Mac.</p>
+<h2 id="premiere-connexion">Première connexion<a class="anchor" href="#premiere-connexion" aria-label="Lien vers cette partie">#</a></h2>
+<p>Tape l’adresse de ton serveur (<code>192.168.1.20</code>, <code>nas:8096</code>…), ton nom d’utilisateur et ton mot de passe. Mira trouve seule le bon port et le bon protocole. Hors de chez toi, utilise l’adresse Tailscale du serveur, ou laisse <a href="../away/">Tailscale intégré</a> le joindre sans l’app Tailscale.</p>
+<p>Ton mot de passe n’est jamais gardé : Mira garde seulement la session ouverte par Jellyfin, dans le trousseau de ton Mac (élément « Mira »). Le reste est dans <code>~/Library/Application Support/Mira</code>, lisible par ton compte macOS seulement.</p>
+<h2 id="mises-a-jour">Mises à jour<a class="anchor" href="#mises-a-jour" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira se met à jour seule. À l’ouverture, puis toutes les 6 heures, elle demande à GitHub s’il existe une nouvelle version, télécharge l’image disque et ne la garde que si sa taille et son SHA-256 sont ceux du manifeste signé de la version. Elle l’installe quand tu quittes Mira, ou tout de suite avec <strong>Redémarrer</strong> dans l’avis.</p>
+<aside class="callout note"><p class="label"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#info"/></svg>À savoir</p><p>Après chaque mise à jour, macOS demande ton mot de passe de session pour laisser Mira lire son propre élément du trousseau. Choisis <strong>Toujours autoriser</strong>. Ça arrive une fois par version, parce que Mira n’est pas signée par un compte développeur Apple. Si tu refuses, Mira te demande simplement de te reconnecter à Jellyfin.</p></aside>
+<p>Mira ne peut pas se remplacer quand elle tourne depuis l’image disque, depuis le dossier Téléchargements (macOS lance une copie protégée), ou depuis un dossier que ton compte ne peut pas modifier. Elle télécharge et vérifie quand même la nouvelle version, et <strong>Ouvrir l’image disque</strong> te laisse la glisser dans Applications.</p>
+<p>Pour arrêter la recherche automatique, désactive <strong>Réglages → Mira sur ce Mac → Mettre à jour automatiquement</strong>.</p>
+<h2 id="trackpad">Trackpad<a class="anchor" href="#trackpad" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira suit les réglages de ton trackpad (défilement naturel, balayer entre les pages).</p>
+<ul><li>Dans la bibliothèque : deux doigts sur le côté pour revenir et avancer, pincer pour changer la taille des affiches, clic forcé sur une affiche pour son menu.</li><li>Dans le lecteur : à gauche ou à droite pour avancer et reculer, en haut ou en bas pour le volume ; écarter deux doigts passe en plein écran, pincer en sort, puis réduit le lecteur en mini-lecteur.</li></ul>
+<h2 id="repartir-de-zero">Repartir de zéro<a class="anchor" href="#repartir-de-zero" aria-label="Lien vers cette partie">#</a></h2>
+<p>Déconnecte-toi d’abord (<strong>Réglages → Compte &amp; serveur</strong>), quitte Mira, puis supprime <code>~/Library/Application Support/Mira</code>.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../windows/" rel="prev"><span>Précédent</span>Windows</a><a class="next" href="../iphone/" rel="next"><span>Suivant</span>iPhone et iPad</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/fr/mac.md"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#pencil"/></svg>Modifier cette page sur GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#users"/></svg>Demander sur Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/"><img src="../../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Libre et gratuit. Sans lien avec Jellyfin. Aucun film fourni.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Code source</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Versions</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Sécurité</a>
+      <a href="../../mac/" hreflang="en" lang="en">English</a>
+    </nav>
+  </footer>
+</body>
+</html>

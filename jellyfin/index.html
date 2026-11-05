@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Set up Jellyfin · Mira wiki</title>
+  <meta name="description" content="Let Mira install Jellyfin on a Windows PC, name your videos so Jellyfin recognises them, and get the server ready for your other devices.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/jellyfin/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/jellyfin/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/jellyfin/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/jellyfin/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Set up Jellyfin">
+  <meta property="og:description" content="Let Mira install Jellyfin on a Windows PC, name your videos so Jellyfin recognises them, and get the server ready for your other devices.">
+  <meta property="og:url" content="https://wiki.miracinema.app/jellyfin/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/wiki.css">
+  <script src="../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copy" data-copied="Copied" data-none="Nothing found for">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Mira wiki, home"><img src="../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/en/">Website</a>
+      <a href="https://miracinema.app/en/#download">Download</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../fr/jellyfin/" hreflang="fr" lang="fr">FR</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#search"/></svg><span class="visually-hidden">Search the wiki</span><input type="search" placeholder="Search…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Set up Jellyfin</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="./" aria-current="page">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Your server</p>
+        <h1>Set up Jellyfin</h1>
+        <p class="lede">Let Mira install Jellyfin on a Windows PC, name your videos so Jellyfin recognises them, and get the server ready for your other devices.</p>
+        <ul class="platforms" aria-label="For"><li>Windows (server PC)</li></ul>
+      </header>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#let-mira-install-jellyfin">Let Mira install Jellyfin</a></li><li><a href="#name-your-videos">Name your videos</a></li><li><a href="#get-the-server-ready">Get the server ready</a></li><li><a href="#keep-jellyfin-safe">Keep Jellyfin safe</a></li></ol></nav>
+      <article class="prose">
+<p>Jellyfin is the server: it keeps your films and series, their artwork and everyone's progress. Mira is the player. Jellyfin runs on one computer that stays on; Mira runs on every device you watch on.</p>
+<p>Already have Jellyfin 10.9 or later? Skip to <a href="#get-the-server-ready">Get the server ready</a>.</p>
+<h2 id="let-mira-install-jellyfin">Let Mira install Jellyfin<a class="anchor" href="#let-mira-install-jellyfin" aria-label="Link to this section">#</a></h2>
+<p>On the Windows PC that will keep your videos, in Mira's sign-in screen, choose <strong>No server yet: Mira installs Jellyfin on this PC</strong>, then:</p>
+<ol><li><strong>Videos folder</strong>: <code>Videos\Jellyfin</code> by default, or another one with <strong>Browse</strong> (a storage drive, for example). Mira creates <strong>Movies</strong>, <strong>Shows</strong> and <strong>Anime</strong> in it.</li><li><strong>Username</strong> and <strong>password</strong>: they become Jellyfin's administrator account.</li><li><strong>Install</strong>. Mira downloads Jellyfin's official installer from <code>repo.jellyfin.org</code>, checks its SHA-256 against the one Jellyfin publishes, and runs it. Windows asks for permission once: Jellyfin installs for the whole PC, as a service that starts with Windows.</li></ol>
+<p>Mira then fills in Jellyfin's first-run wizard: your administrator account, three libraries (Movies, Shows, Anime), access from the Internet turned off. Then it signs you in.</p>
+<aside class="callout tip"><p class="label"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#info"/></svg>Tip</p><p>If Jellyfin's installer shows &quot;Could not start the Jellyfin Server service&quot;, choose <strong>Ignore</strong>. The service usually starts right after, and Mira carries on as soon as Jellyfin answers.</p></aside>
+<p>Jellyfin's service runs as Windows' <strong>Network Service</strong> account, which cannot read your personal folders. Mira gives it read-only access to Movies, Shows and Anime, and nothing else in the folder you chose.</p>
+<h2 id="name-your-videos">Name your videos<a class="anchor" href="#name-your-videos" aria-label="Link to this section">#</a></h2>
+<p>Jellyfin finds the title, poster and summary of each video from its folder and file name. Put one folder per film, one folder per series with a folder per season:</p>
+<div class="code"><pre data-language="text"><code>Movies\Spirited Away (2001)\Spirited Away (2001).mkv
+Shows\Arcane\Season 01\Arcane - S01E03.mkv
+Anime\Frieren\Season 01\Frieren - S01E01.mkv</code></pre></div>
+<p>The year in brackets avoids mix-ups between films of the same name. Subtitle files next to a video, with the same name and a language (<code>Spirited Away (2001).en.srt</code>), are found too.</p>
+<p>New files appear after Jellyfin's next scan. <strong>Refresh</strong> in Mira's library asks Jellyfin to scan right away (administrator account).</p>
+<aside class="callout note"><p class="label"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#info"/></svg>Note</p><p>Copy or move videos into these folders with File Explorer: they take the folder's access rights. A file moved by another program can keep the rights of its old folder and stay invisible to Jellyfin; copy it with File Explorer instead.</p></aside>
+<h2 id="get-the-server-ready">Get the server ready<a class="anchor" href="#get-the-server-ready" aria-label="Link to this section">#</a></h2>
+<p>On the PC that runs Jellyfin, signed in with Jellyfin's administrator account, open the guide (<strong>?</strong> on the left, or <kbd>F1</kbd>). The <strong>Mira on your iPhone</strong> card ticks what is ready and numbers what is left:</p>
+<ul><li><strong>Mira's extension on Jellyfin</strong>: it serves your party link, guests without an account, automatic subtitles and a few other features.</li><li><strong>Windows Firewall</strong>: lets your devices reach Jellyfin, on its port only, from your home network and Tailscale, never on a public network. If Windows counts your home Wi-Fi as public, <strong>Make it private</strong> changes it (only at home: a café's network must stay public).</li><li><strong>Away from home (optional)</strong>: Tailscale on this PC.</li><li><strong>From power-on</strong>: Jellyfin starts with Windows, before anyone signs in, and restarts after an error.</li></ul>
+<p><strong>Set everything up</strong> does all that Mira can, with a single Windows permission, then gives the address to type on your other devices. <strong>Close Jellyfin to the network</strong>, under the steps, removes Mira's firewall rule; <strong>Set everything up</strong> puts it back.</p>
+<h3 id="without-mira-for-windows">Without Mira for Windows<a class="anchor" href="#without-mira-for-windows" aria-label="Link to this section">#</a></h3>
+<p>To add Mira's extension from Jellyfin's web page:</p>
+<ol><li><strong>Dashboard → Plugins → Repositories → +</strong>, name <code>Mira</code>, URL:<div class="code"><pre><code>https://github.com/sasou-web/Mira/releases/latest/download/jellyfin-manifest.json</code></pre></div></li><li><strong>Catalog</strong> → <strong>Mira</strong> → <strong>Install</strong>, then restart Jellyfin (<strong>Dashboard → Restart</strong>).</li></ol>
+<p>Jellyfin then updates the extension with each version of Mira. With a Windows PC, prefer <strong>Set everything up</strong>: Mira checks the extension's signature before installing it.</p>
+<h2 id="keep-jellyfin-safe">Keep Jellyfin safe<a class="anchor" href="#keep-jellyfin-safe" aria-label="Link to this section">#</a></h2>
+<p>In Mira for Windows, on the Jellyfin PC: <strong>Settings → Maintenance → Jellyfin on this PC</strong> shows its version and last backup (Jellyfin 10.11 or later).</p>
+<ul><li><strong>Back up now</strong> makes Jellyfin's built-in backup: accounts, everyone's progress, libraries, artwork and settings, not your videos. Mira can copy each backup to another drive and keeps the three most recent there. It reminds you after 30 days without one.</li><li>When a newer Jellyfin comes out, Mira says so once. <strong>Update Jellyfin</strong> backs up first, downloads the official installer, checks it, then Windows asks for permission. It is refused while someone is watching.</li></ul>
+<aside class="callout warning"><p class="label"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#warning"/></svg>Careful</p><p>A backup holds the sign-in tokens of your devices. Keep it in a folder of your own, never a shared one.</p></aside>
+<p>To restore one: install Jellyfin (same version or later), copy <code>jellyfin-backup-&lt;date&gt;.zip</code> into <code>C:\ProgramData\Jellyfin\Server\data\backups</code>, open <code>http://127.0.0.1:8096</code> → <strong>Dashboard → Backups</strong>, and restore it.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../iphone/" rel="prev"><span>Previous</span>iPhone and iPad</a><a class="next" href="../sign-in/" rel="next"><span>Next</span>Sign in</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/en/jellyfin.md"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#pencil"/></svg>Edit this page on GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#users"/></svg>Ask on Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/en/"><img src="../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Free and open source. Not affiliated with Jellyfin. No films provided.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Source code</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Releases</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Security</a>
+      <a href="../fr/jellyfin/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+  </footer>
+</body>
+</html>

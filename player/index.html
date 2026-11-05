@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>The player · Mira wiki</title>
+  <meta name="description" content="Shortcuts, intros skipped, picture in picture, sleep timer, picture and sound settings, and playback away from home.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/player/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/player/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/player/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/player/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="The player">
+  <meta property="og:description" content="Shortcuts, intros skipped, picture in picture, sleep timer, picture and sound settings, and playback away from home.">
+  <meta property="og:url" content="https://wiki.miracinema.app/player/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/wiki.css">
+  <script src="../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copy" data-copied="Copied" data-none="Nothing found for">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Mira wiki, home"><img src="../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/en/">Website</a>
+      <a href="https://miracinema.app/en/#download">Download</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../fr/player/" hreflang="fr" lang="fr">FR</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#search"/></svg><span class="visually-hidden">Search the wiki</span><input type="search" placeholder="Search…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">The player</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="./" aria-current="page">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Watching</p>
+        <h1>The player</h1>
+        <p class="lede">Shortcuts, intros skipped, picture in picture, sleep timer, picture and sound settings, and playback away from home.</p>
+        <ul class="platforms" aria-label="For"><li>Windows</li><li>Mac</li><li>iPhone</li></ul>
+      </header>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#the-controls">The controls</a></li><li><a href="#intros-credits-and-the-next-episode">Intros, credits and the next episode</a></li><li><a href="#mini-player-and-picture-in-picture">Mini player and picture in picture</a></li><li><a href="#sleep-timer">Sleep timer</a></li><li><a href="#picture-and-sound">Picture and sound</a></li><li><a href="#away-from-home-quality">Away from home: quality</a></li></ol></nav>
+      <article class="prose">
+<p>On Windows and Mac, Mira plays with <strong>mpv</strong>, in its own window: almost every file plays as it is, with its audio tracks, subtitles and chapters. On iPhone, Mira has its own player built on Apple's.</p>
+<h2 id="the-controls">The controls<a class="anchor" href="#the-controls" aria-label="Link to this section">#</a></h2>
+<p>The bar shows the title and episode on the left, the chapter and time on the right. Below: play/pause, next episode and volume on the left; <strong>⋮</strong> (speed, sleep timer, subtitle delay, information), audio and subtitles, mini player, picture in picture and full screen on the right. Controls hide after a few seconds without moving the mouse.</p>
+<ul><li>The seek bar is cut into chapters; hovering shows the time, the chapter and, when Jellyfin has prepared them, a preview of the picture.</li><li>Volume goes up to 200 % for a title recorded too low: past 100 %, the sound is amplified then limited, without clipping.</li><li>A click on the picture pauses or resumes, a double click goes full screen. A click near the bars only shows the controls, never pauses by mistake.</li></ul>
+<h3 id="keyboard">Keyboard<a class="anchor" href="#keyboard" aria-label="Link to this section">#</a></h3>
+<div class="table"><table><thead><tr><th scope="col">Action</th><th scope="col">Windows</th><th scope="col">Mac</th></tr></thead><tbody><tr><td>Play / pause</td><td><kbd>Space</kbd> or <kbd>K</kbd></td><td><kbd>Space</kbd> or <kbd>K</kbd></td></tr><tr><td>Back / forward 10 seconds</td><td><kbd>←</kbd> / <kbd>→</kbd>, <kbd>J</kbd> / <kbd>L</kbd></td><td><kbd>←</kbd> / <kbd>→</kbd></td></tr><tr><td>Back / forward 1 minute</td><td><kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td><td></td></tr><tr><td>Jump to 0 %, 10 %… 90 %</td><td><kbd>0</kbd> to <kbd>9</kbd></td><td></td></tr><tr><td>Volume</td><td><kbd>↑</kbd> / <kbd>↓</kbd>, mouse wheel</td><td><kbd>↑</kbd> / <kbd>↓</kbd></td></tr><tr><td>Mute</td><td><kbd>M</kbd></td><td><kbd>M</kbd></td></tr><tr><td>Subtitles off / on</td><td><kbd>C</kbd></td><td></td></tr><tr><td>Full screen</td><td><kbd>F</kbd>, <kbd>F11</kbd>, double click</td><td><kbd>F</kbd>, double click</td></tr><tr><td>Mini player</td><td><kbd>I</kbd></td><td></td></tr><tr><td>Skip the intro, recap or credits</td><td><kbd>S</kbd></td><td><kbd>S</kbd></td></tr><tr><td>Next episode</td><td><kbd>N</kbd></td><td><kbd>N</kbd></td></tr><tr><td>Back, leave full screen</td><td><kbd>Esc</kbd></td><td><kbd>Esc</kbd></td></tr></tbody></table></div>
+<h3 id="on-iphone">On iPhone<a class="anchor" href="#on-iphone" aria-label="Link to this section">#</a></h3>
+<p>Tap to show the controls. Double tap on a side to go back or forward 10 seconds (taps add up). Swipe up or down on the left for brightness, on the right for volume, across to seek. Press and hold to play at ×2, pinch to fill the screen, swipe down to shrink the player. The lock keeps stray touches away.</p>
+<h2 id="intros-credits-and-the-next-episode">Intros, credits and the next episode<a class="anchor" href="#intros-credits-and-the-next-episode" aria-label="Link to this section">#</a></h2>
+<p><strong>Skip intro</strong>, <strong>Skip credits</strong> and recap buttons appear from Jellyfin's media segments (Jellyfin 10.10 or later, from the server or a plugin like Intro Skipper) or from the file's chapter names. With <strong>Settings → Playback → Skip intros and recaps</strong>, Mira skips them without asking, once each: going back into one plays it again.</p>
+<p><strong>Next episode</strong> appears during the end credits or in the last 20 seconds. With <strong>Play episodes back to back</strong>, a 10-second countdown starts; <strong>Cancel</strong> stays on this episode.</p>
+<p>Mira resumes a little before where you stopped, 5 seconds by default, to pick up the thread (<strong>Settings → Playback</strong>). <strong>From the beginning</strong> on a title's page starts over.</p>
+<h2 id="mini-player-and-picture-in-picture">Mini player and picture in picture<a class="anchor" href="#mini-player-and-picture-in-picture" aria-label="Link to this section">#</a></h2>
+<ul><li><strong>Mini player</strong>: the video keeps playing in a corner of the library while you browse. Drag it to any corner; on Windows, push it past the right edge to tuck it behind a tab.</li><li><strong>Picture in picture</strong> (Windows and Mac): the video in a small window of its own, above your other windows, with its subtitles. On iPhone, Apple's Picture in Picture.</li></ul>
+<h2 id="sleep-timer">Sleep timer<a class="anchor" href="#sleep-timer" aria-label="Link to this section">#</a></h2>
+<p>In the player's <strong>⋮</strong> menu: pause in 15 minutes, 30 minutes, 1 hour, or at the end of the episode. On iPhone, it is on the title's page. It is cleared when the player closes.</p>
+<h2 id="picture-and-sound">Picture and sound<a class="anchor" href="#picture-and-sound" aria-label="Link to this section">#</a></h2>
+<ul><li><strong>Picture</strong> (Settings → Playback, Windows and Mac): <strong>Standard</strong> (mpv's own rendering, the lightest), <strong>Cinema</strong> (the default: smooth motion on any screen, no banding in gradients) and <strong>Maximum</strong> (with the finest scaling). If the computer drops frames, Mira steps down one level by itself and tells you.</li><li><strong>Audio output</strong> (Windows, Settings → Audio &amp; subtitles): the output device, the number of channels, and <strong>Sound sent to the amplifier as is</strong> for an amplifier or sound bar that decodes Dolby and DTS, Atmos included. <strong>Test the audio output</strong> plays a tone on each speaker.</li><li><strong>Audio delay</strong> (⋮ menu): if lips and voices don't match, in steps of 0.1 s, until the player closes.</li></ul>
+<h2 id="away-from-home-quality">Away from home: quality<a class="anchor" href="#away-from-home-quality" aria-label="Link to this section">#</a></h2>
+<p>At home, Mira plays the file as it is. Away, a 4K film may not fit your connection: <strong>Quality</strong> (Settings → Playback and the player's <strong>⋮</strong> menu) sets a limit, or <strong>Auto</strong> measures the connection to Jellyfin. Under the limit, Jellyfin converts the file while you watch. If the connection drops, Mira waits for Jellyfin, reopens the stream once where it was, and only then says it cannot play.</p>
+<p>Converting is heavy for the server. On the Jellyfin PC, Mira can have the graphics card do it: <strong>Settings → Maintenance → Convert with the graphics card</strong>, tried first on one of your titles.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../library/" rel="prev"><span>Previous</span>Your library</a><a class="next" href="../subtitles/" rel="next"><span>Next</span>Audio and subtitles</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/en/player.md"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#pencil"/></svg>Edit this page on GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#users"/></svg>Ask on Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/en/"><img src="../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Free and open source. Not affiliated with Jellyfin. No films provided.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Source code</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Releases</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Security</a>
+      <a href="../fr/player/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+  </footer>
+</body>
+</html>

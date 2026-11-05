@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Troubleshooting · Mira wiki</title>
+  <meta name="description" content="The messages Mira shows when something is wrong, what they mean and what to do.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/troubleshooting/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/troubleshooting/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/troubleshooting/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/troubleshooting/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Troubleshooting">
+  <meta property="og:description" content="The messages Mira shows when something is wrong, what they mean and what to do.">
+  <meta property="og:url" content="https://wiki.miracinema.app/troubleshooting/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/wiki.css">
+  <script src="../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copy" data-copied="Copied" data-none="Nothing found for">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Mira wiki, home"><img src="../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/en/">Website</a>
+      <a href="https://miracinema.app/en/#download">Download</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../fr/troubleshooting/" hreflang="fr" lang="fr">FR</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#search"/></svg><span class="visually-hidden">Search the wiki</span><input type="search" placeholder="Search…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Troubleshooting</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="./" aria-current="page">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Help</p>
+        <h1>Troubleshooting</h1>
+        <p class="lede">The messages Mira shows when something is wrong, what they mean and what to do.</p>
+        <ul class="platforms" aria-label="For"><li>Windows</li><li>Mac</li><li>iPhone</li></ul>
+      </header>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#can-t-reach-jellyfin">Can't reach Jellyfin</a></li><li><a href="#can-t-sign-in">Can't sign in</a></li><li><a href="#can-t-play">Can't play</a></li><li><a href="#updates">Updates</a></li><li><a href="#still-stuck">Still stuck?</a></li></ol></nav>
+      <article class="prose">
+<p>Mira says what is wrong in its own words, with a button that helps when there is one. Find the message below, or search this wiki for a word of it.</p>
+<h2 id="can-t-reach-jellyfin">Can't reach Jellyfin<a class="anchor" href="#can-t-reach-jellyfin" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Message or symptom</th><th scope="col">What to do</th></tr></thead><tbody><tr><td>Works at home, not away</td><td>The home address (<code>192.168…</code>) only works on your Wi-Fi. Use <a href="../away/">Tailscale</a>: on the Jellyfin PC, the guide's <strong>Set everything up</strong>; on your device, Built-in Tailscale or the Tailscale app.</td></tr><tr><td>&quot;… isn't connected to Tailscale: it's off, asleep or offline&quot;</td><td>The Jellyfin PC left Tailscale. Turn it on or wake it. Mira reloads Home as soon as it is back.</td></tr><tr><td>Unreachable after a while without using the Jellyfin PC</td><td>It went to sleep, and Tailscale cannot wake it. <strong>Set everything up</strong> keeps it awake on mains power; on a laptop, set closing the lid to <strong>Do nothing</strong> on mains power.</td></tr><tr><td>Unreachable after the Jellyfin PC restarted, until someone signs in to Windows</td><td>Tailscale waits for a session: <strong>Set everything up</strong> turns on <strong>Run unattended</strong>, or Tailscale's menu → <strong>Preferences</strong> → <strong>Run unattended</strong>.</td></tr><tr><td>Tailscale asks to sign in again on the Jellyfin PC</td><td>Its key expired (every 180 days by default). Sign in again, then in the <a href="https://login.tailscale.com/admin/machines" rel="noopener">admin console</a>, <strong>⋯ → Disable key expiry</strong> on that PC.</td></tr><tr><td>&quot;Waiting for approval in Tailscale's admin console&quot;</td><td>Your Tailscale network approves each new device: <strong>Open Tailscale's admin console</strong> and approve the device.</td></tr><tr><td>Everything shows &quot;Connecting…&quot;, on every device</td><td>Tailscale itself may be down: check <a href="https://status.tailscale.com" rel="noopener">status.tailscale.com</a>. See <a href="../away/#when-tailscale-itself-is-down">When Tailscale itself is down</a>.</td></tr><tr><td>&quot;Windows Security blocks mira-tailscale.exe&quot;</td><td>An antivirus blocks Built-in Tailscale. Install the Tailscale app on this PC instead: Mira then goes through it.</td></tr><tr><td>&quot;macOS blocks mira-tailscale&quot;</td><td>The &quot;downloaded from the Internet&quot; mark stayed on Mira.app: <strong>Copy the command</strong> in Built-in Tailscale's settings, paste it in Terminal, restart Mira.</td></tr><tr><td>The iPhone doesn't see Jellyfin at home</td><td>iOS's local network access is off: <strong>Settings → Apps → Mira → Local Network</strong>.</td></tr><tr><td>&quot;Jellyfin is stopped on this PC&quot;</td><td><strong>Start Jellyfin</strong>, in the notice or on the guide's card. If it stops again, Mira shows the cause from Jellyfin's log (port 8096 taken, disk full…).</td></tr></tbody></table></div>
+<h2 id="can-t-sign-in">Can't sign in<a class="anchor" href="#can-t-sign-in" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Message</th><th scope="col">What to do</th></tr></thead><tbody><tr><td>&quot;This isn't a Jellyfin server&quot;</td><td>Something else answers at that address (router, NAS, Emby): check the port, 8096 by default.</td></tr><tr><td>&quot;Mira needs Jellyfin 10.9&quot;</td><td>Update Jellyfin.</td></tr><tr><td>&quot;HTTPS certificate not recognised&quot;</td><td>For a server at home, type its full <code>http://</code> address (Mira suggests it). Otherwise, install a valid certificate.</td></tr><tr><td>&quot;This address goes over the Internet, in http://&quot;</td><td>Your password would travel unencrypted. Use the <code>https://</code> or Tailscale address.</td></tr><tr><td>&quot;This Jellyfin already has an administrator account&quot;</td><td>Its setup was started with another account: finish it on <code>http://127.0.0.1:8096</code>, then sign in.</td></tr><tr><td>&quot;Another program already answers on port 8096&quot;</td><td>It isn't Jellyfin: close that program, or install Jellyfin on another PC.</td></tr></tbody></table></div>
+<h2 id="can-t-play">Can't play<a class="anchor" href="#can-t-play" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Symptom</th><th scope="col">What to do</th></tr></thead><tbody><tr><td>Library shows, nothing plays (Windows)</td><td><strong>Settings → Playback</strong>: install the mpv engine, or pick a 64-bit libmpv DLL.</td></tr><tr><td>&quot;The video engine couldn't be downloaded&quot;</td><td>Check the Internet connection, then try again from <strong>Settings → Playback</strong>. It comes from <code>downloads.sourceforge.net</code>.</td></tr><tr><td>Stutters away from home</td><td>Lower <strong>Quality</strong> in the player's <strong>⋮</strong> menu, or choose <strong>Auto</strong>.</td></tr><tr><td>Picture stutters or stays black (Windows)</td><td>Turn off <strong>Hardware decoding</strong> in <strong>Settings → Playback</strong>.</td></tr><tr><td>Grey or black picture (Mac)</td><td>In the player, <strong>⋮ → Grey or black picture? Repair</strong>. Each repair goes one step further; Mira keeps the one that works.</td></tr><tr><td>&quot;Can't play this&quot;</td><td>Mira reopened the stream and Jellyfin still could not serve the file. Jellyfin's administrator finds the reason in <strong>Settings → Maintenance → Reported playback failures</strong>.</td></tr><tr><td>A file was added but doesn't show</td><td>Check it is in <strong>Movies</strong>, <strong>Shows</strong> or <strong>Anime</strong>, and named the way Jellyfin expects (see <a href="../jellyfin/#name-your-videos">Name your videos</a>). Then <strong>Refresh</strong> in the library.</td></tr></tbody></table></div>
+<h2 id="updates">Updates<a class="anchor" href="#updates" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Symptom</th><th scope="col">What to do</th></tr></thead><tbody><tr><td>Windows: an update doesn't install</td><td><strong>Settings → Mira on this PC</strong> shows the last error; <code>data\updates\update.log</code> has the details. Mira's folder must stay writable.</td></tr><tr><td>Mac: Mira asks for the keychain after each update</td><td>Normal, once per version: choose <strong>Always Allow</strong>. See <a href="../mac/#updates">Install on Mac</a>.</td></tr><tr><td>iPhone: Mira no longer opens</td><td>It expired after 7 days. Open AltStore at home and tap <strong>Refresh All</strong>. Nothing is lost.</td></tr></tbody></table></div>
+<h2 id="still-stuck">Still stuck?<a class="anchor" href="#still-stuck" aria-label="Link to this section">#</a></h2>
+<p>Ask on <a href="https://discord.gg/Bh3F6PDUvB" rel="noopener">Discord</a>, or <a href="https://github.com/sasou-web/Mira/issues/new/choose" rel="noopener">open an issue</a> with the versions of Mira, your system and Jellyfin. Never attach a password, a token, Mira's <code>data</code> folder or personal media.</p>
+<p>On Mac, a player log helps: in Terminal,</p>
+<div class="code"><pre data-language="sh"><code>MIRA_MPV_LOG=$HOME/Desktop/mpv.log /Applications/Mira.app/Contents/MacOS/Mira</code></pre></div>
+<p>writes <code>mpv.log</code> on your desktop.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../privacy/" rel="prev"><span>Previous</span>Privacy</a><a class="next" href="../faq/" rel="next"><span>Next</span>FAQ</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/en/troubleshooting.md"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#pencil"/></svg>Edit this page on GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#users"/></svg>Ask on Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/en/"><img src="../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Free and open source. Not affiliated with Jellyfin. No films provided.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Source code</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Releases</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Security</a>
+      <a href="../fr/troubleshooting/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+  </footer>
+</body>
+</html>

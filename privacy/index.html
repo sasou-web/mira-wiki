@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy · Mira wiki</title>
+  <meta name="description" content="What Mira sends, to whom and when. No account, no analytics, no telemetry.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/privacy/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/privacy/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/privacy/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Privacy">
+  <meta property="og:description" content="What Mira sends, to whom and when. No account, no analytics, no telemetry.">
+  <meta property="og:url" content="https://wiki.miracinema.app/privacy/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/wiki.css">
+  <script src="../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copy" data-copied="Copied" data-none="Nothing found for">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Mira wiki, home"><img src="../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/en/">Website</a>
+      <a href="https://miracinema.app/en/#download">Download</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../fr/privacy/" hreflang="fr" lang="fr">FR</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#search"/></svg><span class="visually-hidden">Search the wiki</span><input type="search" placeholder="Search…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Privacy</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="./" aria-current="page">Privacy</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Help</p>
+        <h1>Privacy</h1>
+        <p class="lede">What Mira sends, to whom and when. No account, no analytics, no telemetry.</p>
+        <ul class="platforms" aria-label="For"><li>Windows</li><li>Mac</li><li>iPhone</li></ul>
+      </header>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#always">Always</a></li><li><a href="#only-when-you-use-a-feature">Only when you use a feature</a></li><li><a href="#on-your-devices">On your devices</a></li><li><a href="#report-a-problem">Report a problem</a></li></ol></nav>
+      <article class="prose">
+<p>Mira has no account, no ads, no analytics and no telemetry. It talks to your Jellyfin server, and to a few services only when a feature needs them, each listed below. The code is open: <a href="https://github.com/sasou-web/Mira" rel="noopener">see for yourself</a>.</p>
+<h2 id="always">Always<a class="anchor" href="#always" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Who</th><th scope="col">To</th><th scope="col">What</th></tr></thead><tbody><tr><td>Mira, every device</td><td><strong>your Jellyfin server</strong></td><td>your library, playback and progress, with your session's token in a header, never in an address (except the iPhone's player stream, which Apple's player cannot send otherwise)</td></tr><tr><td>Mira for Windows and Mac</td><td><strong>GitHub</strong> (<code>api.github.com</code>)</td><td>the update check, at startup then every 6 hours: the request itself (your IP address, Mira's version), nothing else. Turn it off in <strong>Settings → Mira on this PC → Update automatically</strong></td></tr></tbody></table></div>
+<p>Before you sign in, Mira looks for Jellyfin on this computer, on your home network (Jellyfin's discovery question, never beyond your network) and on your Tailscale devices. Nothing identifying is sent; your password goes only to the address you sign in to.</p>
+<h2 id="only-when-you-use-a-feature">Only when you use a feature<a class="anchor" href="#only-when-you-use-a-feature" aria-label="Link to this section">#</a></h2>
+<div class="table"><table><thead><tr><th scope="col">Feature</th><th scope="col">Contacts</th><th scope="col">What</th></tr></thead><tbody><tr><td><strong>Built-in Tailscale</strong>, once you sign in to it</td><td>Tailscale's coordination servers and relays</td><td>like the Tailscale app: the account you chose, the device's name, its system and IP addresses, its public key. Videos stay end-to-end encrypted. No logs sent</td></tr><tr><td><strong>The mpv engine</strong> (Windows)</td><td>SourceForge</td><td>the download of the engine, SHA-256 checked</td></tr><tr><td><strong>Installing or updating Jellyfin</strong> (Windows)</td><td><code>repo.jellyfin.org</code>, GitHub (winget's catalogue, once a day on the Jellyfin PC)</td><td>the download, and whether a newer version exists</td></tr><tr><td><strong>Automatic subtitles</strong></td><td>OpenSubtitles, SubDL, from your server</td><td>the file's fingerprint and size, IMDb/TMDb ids, season, episode, title, year, language. Never the file's name</td></tr><tr><td><strong>Search for subtitles…</strong> with another Jellyfin plugin</td><td>that plugin's service, from your server</td><td>what the plugin sends; Mira tells you before</td></tr><tr><td><strong>Your party link</strong> through Tailscale Funnel</td><td>Tailscale's relays, then your guests</td><td>your guests' traffic to Mira's page, encrypted to your PC. Your PC's Tailscale name becomes public</td></tr><tr><td><strong>AltStore</strong> (iPhone)</td><td>Apple, <code>miracinema.app</code>, GitHub</td><td>your Apple ID to Apple only, for the free certificate; Mira's source and app</td></tr></tbody></table></div>
+<h2 id="on-your-devices">On your devices<a class="anchor" href="#on-your-devices" aria-label="Link to this section">#</a></h2>
+<ul><li>Your Jellyfin password is never stored: only the session. Windows protects it for your account; Mac and iPhone keep it in the keychain (on iPhone, this device only, never in backups).</li><li>Built-in Tailscale's keys and state are encrypted on the device. Its log stays there and holds no sign-in page.</li><li>Nothing about you or your library is ever collected.</li></ul>
+<p>Full details, for each request: <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md" rel="noopener">SECURITY.md</a> (in French).</p>
+<h2 id="report-a-problem">Report a problem<a class="anchor" href="#report-a-problem" aria-label="Link to this section">#</a></h2>
+<p>Found a security issue? Use <strong>Security → Report a vulnerability</strong> on <a href="https://github.com/sasou-web/Mira/security" rel="noopener">Mira's GitHub repository</a>, never a public issue. Never post a token, a session file or a password anywhere public.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../settings/" rel="prev"><span>Previous</span>Settings</a><a class="next" href="../troubleshooting/" rel="next"><span>Next</span>Troubleshooting</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/en/privacy.md"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#pencil"/></svg>Edit this page on GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#users"/></svg>Ask on Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/en/"><img src="../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Free and open source. Not affiliated with Jellyfin. No films provided.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Source code</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Releases</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Security</a>
+      <a href="../fr/privacy/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+  </footer>
+</body>
+</html>

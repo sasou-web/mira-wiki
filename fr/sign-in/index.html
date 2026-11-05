@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Se connecter à Jellyfin · Mira wiki</title>
+  <meta name="description" content="Quelle adresse taper, comment Mira trouve ton serveur, et pourquoi il demande parfois avant d’envoyer ton mot de passe.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/fr/sign-in/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/sign-in/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/sign-in/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/sign-in/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Se connecter à Jellyfin">
+  <meta property="og:description" content="Quelle adresse taper, comment Mira trouve ton serveur, et pourquoi il demande parfois avant d’envoyer ton mot de passe.">
+  <meta property="og:url" content="https://wiki.miracinema.app/fr/sign-in/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+  <link rel="preload" href="../../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/wiki.css">
+  <script src="../../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copier" data-copied="Copié" data-none="Rien trouvé pour">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Wiki de Mira, accueil"><img src="../../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/">Site</a>
+      <a href="https://miracinema.app/#download">Télécharger</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../../sign-in/" hreflang="en" lang="en">EN</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#search"/></svg><span class="visually-hidden">Chercher dans le wiki</span><input type="search" placeholder="Chercher…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Se connecter</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Bien démarrer</p><ul><li><a href="../">Bienvenue</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone et iPad</a></li></ul></li><li><p class="group">Ton serveur</p><ul><li><a href="../jellyfin/">Préparer Jellyfin</a></li><li><a href="./" aria-current="page">Se connecter</a></li><li><a href="../away/">Hors de chez toi</a></li></ul></li><li><p class="group">Regarder</p><ul><li><a href="../library/">Ta bibliothèque</a></li><li><a href="../player/">Le lecteur</a></li><li><a href="../subtitles/">Audio et sous-titres</a></li><li><a href="../together/">Regarder ensemble</a></li></ul></li><li><p class="group">Aide</p><ul><li><a href="../settings/">Réglages</a></li><li><a href="../privacy/">Vie privée</a></li><li><a href="../troubleshooting/">Dépannage</a></li><li><a href="../faq/">Questions</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Ton serveur</p>
+        <h1>Se connecter à Jellyfin</h1>
+        <p class="lede">Quelle adresse taper, comment Mira trouve ton serveur, et pourquoi il demande parfois avant d’envoyer ton mot de passe.</p>
+        <ul class="platforms" aria-label="Pour"><li>Windows</li><li>Mac</li><li>iPhone</li></ul>
+      </header>
+      <nav class="toc" aria-label="Sur cette page"><p>Sur cette page</p><ol><li><a href="#mira-cherche-ton-serveur">Mira cherche ton serveur</a></li><li><a href="#quelle-adresse-taper">Quelle adresse taper</a></li><li><a href="#quand-mira-demande-avant-de-te-connecter">Quand Mira demande avant de te connecter</a></li><li><a href="#se-connecter-avec-un-code">Se connecter avec un code</a></li><li><a href="#ce-que-mira-garde">Ce que Mira garde</a></li><li><a href="#tes-choix-te-suivent">Tes choix te suivent</a></li></ol></nav>
+      <article class="prose">
+<h2 id="mira-cherche-ton-serveur">Mira cherche ton serveur<a class="anchor" href="#mira-cherche-ton-serveur" aria-label="Lien vers cette partie">#</a></h2>
+<p>Tant qu’aucune adresse n’est connue, l’écran de connexion cherche Jellyfin pendant deux ou trois secondes : sur cet ordinateur, sur le réseau de la maison (la découverte de Jellyfin) et sur tes appareils en ligne sur Tailscale. Il remplit la meilleure adresse trouvée et dit où il l’a trouvée ; les autres serveurs sont proposés à côté. <strong>Chercher à nouveau</strong> relance la recherche. Une adresse que tu as tapée n’est jamais remplacée.</p>
+<p>L’iPhone ne peut pas découvrir les serveurs du réseau de la maison (Apple ne le permet qu’aux comptes développeur payants) : tape l’adresse, ou passe par Tailscale.</p>
+<h2 id="quelle-adresse-taper">Quelle adresse taper<a class="anchor" href="#quelle-adresse-taper" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira accepte l’adresse sous presque toutes ses formes :</p>
+<div class="table"><table><thead><tr><th scope="col">Tu tapes</th><th scope="col">Mira essaie</th></tr></thead><tbody><tr><td><code>192.168.1.20</code></td><td>le PC de la maison, port 8096</td></tr><tr><td><code>nas:8096</code></td><td>un nom de ton réseau, avec son port</td></tr><tr><td><code>100.101.102.103</code> ou <code>jellyfin-pc</code></td><td>l’adresse ou le nom du PC sur Tailscale</td></tr><tr><td><code>https://jellyfin.example.com</code></td><td>un serveur sur Internet</td></tr><tr><td>une adresse copiée de la page web de Jellyfin</td><td>le même serveur</td></tr></tbody></table></div>
+<p>Sans <code>http://</code> ni <code>https://</code>, Mira essaie HTTPS, puis le port 8096, puis HTTP, et montre l’adresse qu’il a gardée.</p>
+<aside class="callout tip"><p class="label"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#info"/></svg>Astuce</p><p>Sur le PC de Jellyfin lui-même, l’adresse est <code>http://127.0.0.1:8096</code>. Pour tes autres appareils, la carte <strong>Mira sur ton iPhone</strong> du guide donne la bonne. Une adresse Tailscale marche à la maison comme ailleurs.</p></aside>
+<h2 id="quand-mira-demande-avant-de-te-connecter">Quand Mira demande avant de te connecter<a class="anchor" href="#quand-mira-demande-avant-de-te-connecter" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira vérifie l’adresse avant que ton mot de passe parte :</p>
+<ul><li><strong>Ce n’est pas un serveur Jellyfin</strong> : quelque chose répond, mais pas Jellyfin (une box, la page d’un NAS, Emby). Vérifie le port, 8096 par défaut.</li><li><strong>Mira a besoin de Jellyfin 10.9</strong> : mets Jellyfin à jour.</li><li><strong>Certificat HTTPS pas reconnu</strong> : Mira ne repasse jamais tout seul en <code>http://</code>, ton mot de passe y passerait en clair. Pour un serveur à la maison, tape son adresse <code>http://</code> complète.</li><li><strong>Cette adresse passe par Internet, en http://</strong> : ton mot de passe traverserait Internet sans chiffrement. Utilise l’adresse <code>https://</code> du serveur ou son adresse Tailscale. <strong>Se connecter quand même</strong> l’envoie malgré tout.</li></ul>
+<p>À la maison, sur ce PC et par Tailscale, rien n’est demandé : Tailscale chiffre déjà tout.</p>
+<h2 id="se-connecter-avec-un-code">Se connecter avec un code<a class="anchor" href="#se-connecter-avec-un-code" aria-label="Lien vers cette partie">#</a></h2>
+<p>Mira pour iPhone peut se connecter sans taper de mot de passe : <strong>Se connecter avec un code</strong> affiche six chiffres. Un administrateur les valide dans Mira pour Windows ou Mac (<strong>Réglages → Amis &amp; invités → Autoriser un appareil</strong>) en choisissant le compte, ou sur la page web de Jellyfin. <strong>Quick Connect</strong> doit être activé dans Jellyfin (Tableau de bord → Général).</p>
+<h2 id="ce-que-mira-garde">Ce que Mira garde<a class="anchor" href="#ce-que-mira-garde" aria-label="Lien vers cette partie">#</a></h2>
+<p>Ton mot de passe n’est jamais gardé. Mira garde seulement la session ouverte par Jellyfin : protégée par Windows pour ton compte, dans le trousseau sur Mac et iPhone. <strong>Se déconnecter</strong> ferme aussi la session sur Jellyfin. Sous Windows et Mac, <strong>Effacer aussi les données de ce compte sur ce PC</strong> retire le cache et les images de ce compte.</p>
+<h2 id="tes-choix-te-suivent">Tes choix te suivent<a class="anchor" href="#tes-choix-te-suivent" aria-label="Lien vers cette partie">#</a></h2>
+<p>Tes langues préférées, <strong>Passer les intros et les récaps</strong>, l’audio et les sous-titres choisis pour chaque série et les titres retirés de Continuer à regarder sont gardés sur ton compte Jellyfin, et te suivent sur tes autres appareils. Le choix le plus récent gagne. L’apparence et les rangées de l’accueil restent propres à chaque appareil.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../jellyfin/" rel="prev"><span>Précédent</span>Préparer Jellyfin</a><a class="next" href="../away/" rel="next"><span>Suivant</span>Hors de chez toi</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/fr/sign-in.md"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#pencil"/></svg>Modifier cette page sur GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#users"/></svg>Demander sur Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/"><img src="../../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Libre et gratuit. Sans lien avec Jellyfin. Aucun film fourni.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Code source</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Versions</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Sécurité</a>
+      <a href="../../sign-in/" hreflang="en" lang="en">English</a>
+    </nav>
+  </footer>
+</body>
+</html>

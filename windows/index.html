@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Install on Windows · Mira wiki</title>
+  <meta name="description" content="Download Mira for Windows, get past SmartScreen, add the video engine and keep Mira up to date.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/windows/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/windows/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/windows/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/windows/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Install on Windows">
+  <meta property="og:description" content="Download Mira for Windows, get past SmartScreen, add the video engine and keep Mira up to date.">
+  <meta property="og:url" content="https://wiki.miracinema.app/windows/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/wiki.css">
+  <script src="../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copy" data-copied="Copied" data-none="Nothing found for">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Mira wiki, home"><img src="../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/en/">Website</a>
+      <a href="https://miracinema.app/en/#download">Download</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../fr/windows/" hreflang="fr" lang="fr">FR</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#search"/></svg><span class="visually-hidden">Search the wiki</span><input type="search" placeholder="Search…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Windows</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="./" aria-current="page">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Start</p>
+        <h1>Install on Windows</h1>
+        <p class="lede">Download Mira for Windows, get past SmartScreen, add the video engine and keep Mira up to date.</p>
+        <ul class="platforms" aria-label="For"><li>Windows 10</li><li>Windows 11</li></ul>
+      </header>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#download">Download</a></li><li><a href="#get-past-smartscreen">Get past SmartScreen</a></li><li><a href="#first-start">First start</a></li><li><a href="#the-video-engine">The video engine</a></li><li><a href="#updates">Updates</a></li><li><a href="#uninstall">Uninstall</a></li></ol></nav>
+      <article class="prose">
+<h2 id="download">Download<a class="anchor" href="#download" aria-label="Link to this section">#</a></h2>
+<p>The <a href="https://github.com/sasou-web/Mira/releases/latest" rel="noopener">latest release</a> has three files for Windows. One is enough.</p>
+<div class="table"><table><thead><tr><th scope="col">File</th><th scope="col">For</th></tr></thead><tbody><tr><td><a href="https://github.com/sasou-web/Mira/releases/download/v0.9.4/Mira-0.9.4-win-x64-setup.exe" rel="noopener">Installer</a></td><td>Most people. Installs Mira for your Windows account only, without administrator rights, with a Start menu shortcut.</td></tr><tr><td><a href="https://github.com/sasou-web/Mira/releases/download/v0.9.4/Mira-0.9.4-win-x64-portable.exe" rel="noopener">Portable</a></td><td>One file that runs as it is. Keep it in a folder of its own, like <code>Documents\Mira</code>: it creates its <code>data</code> folder next to itself.</td></tr><tr><td><a href="https://github.com/sasou-web/Mira/releases/download/v0.9.4/Mira-0.9.4-win-x64.zip" rel="noopener">Zip</a></td><td>The whole application folder. Extract the entire <code>Mira</code> folder somewhere you can write, never just <code>Mira.exe</code>.</td></tr></tbody></table></div>
+<p>The .NET runtime is included: there is nothing else to install.</p>
+<h2 id="get-past-smartscreen">Get past SmartScreen<a class="anchor" href="#get-past-smartscreen" aria-label="Link to this section">#</a></h2>
+<p>Mira's Windows files are not code-signed yet, so Windows SmartScreen may say &quot;Windows protected your PC&quot;. Click <strong>More info</strong>, then <strong>Run anyway</strong>. You can check first that your file is the published one: each file has a <code>.sha256</code> next to it in the release.</p>
+<div class="code"><pre data-language="powershell"><code>Get-FileHash .\Mira-0.9.4-win-x64-setup.exe -Algorithm SHA256</code></pre></div>
+<p>The value must match the one in the <code>.sha256</code> file.</p>
+<h2 id="first-start">First start<a class="anchor" href="#first-start" aria-label="Link to this section">#</a></h2>
+<ol><li>Open Mira. The first time, a welcome screen explains what Jellyfin and Mira each do.</li><li>Mira looks for Jellyfin on this PC, on your home network and on your Tailscale devices, and fills in the address it finds. Enter your Jellyfin username and password, then <strong>Sign in</strong>. More in <a href="../sign-in/">Sign in to Jellyfin</a>.</li><li>No Jellyfin yet? Choose <strong>No server yet: Mira installs Jellyfin on this PC</strong>. See <a href="../jellyfin/">Set up Jellyfin</a>.</li></ol>
+<h2 id="the-video-engine">The video engine<a class="anchor" href="#the-video-engine" aria-label="Link to this section">#</a></h2>
+<p>Mira plays with mpv. Its engine (31 MB) is not inside Mira's files: Mira downloads a precise build from mpv's Windows builds on SourceForge and checks its SHA-256 before using it.</p>
+<ul><li>With the installer, leave <strong>Download the mpv video engine</strong> ticked.</li><li>Otherwise, Mira offers it at the first playback, or in <strong>Settings → Playback → Install the mpv engine</strong>.</li><li>Already have mpv.net or Jellyfin MPV Shim? Mira reuses their engine and downloads nothing. You can also pick another 64-bit <code>libmpv-2.dll</code> in <strong>Settings → Playback</strong>.</li></ul>
+<h2 id="updates">Updates<a class="anchor" href="#updates" aria-label="Link to this section">#</a></h2>
+<p>Mira updates itself. A few seconds after it opens, then every 6 hours, it asks GitHub for a new version, downloads it in the background, checks that it is signed by Mira with the announced size and SHA-256, and installs it when you close Mira. <strong>Restart</strong> in the notice installs it right away.</p>
+<p>To stop the automatic check, turn off <strong>Settings → Mira on this PC → Update automatically</strong>. The <strong>Search</strong> button stays.</p>
+<p>Your settings and session live in the <code>data</code> folder and are never touched by an update.</p>
+<h2 id="uninstall">Uninstall<a class="anchor" href="#uninstall" aria-label="Link to this section">#</a></h2>
+<p><strong>Settings → Apps → Mira</strong>. The uninstaller asks before deleting your data (no by default), then lists what remains on the PC: Jellyfin if Mira installed it, the &quot;Mira - Jellyfin&quot; firewall rule, and Jellyfin's read access to your video folders.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../" rel="prev"><span>Previous</span>Welcome</a><a class="next" href="../mac/" rel="next"><span>Next</span>Mac</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/en/windows.md"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#pencil"/></svg>Edit this page on GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#users"/></svg>Ask on Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/en/"><img src="../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Free and open source. Not affiliated with Jellyfin. No films provided.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Source code</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Releases</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Security</a>
+      <a href="../fr/windows/" hreflang="fr" lang="fr">Français</a>
+    </nav>
+  </footer>
+</body>
+</html>

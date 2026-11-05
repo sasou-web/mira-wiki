@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Le lecteur · Mira wiki</title>
+  <meta name="description" content="Raccourcis, intros passées, image dans l’image, minuterie, réglages de l’image et du son, et lecture loin de la maison.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://wiki.miracinema.app/fr/player/">
+  <link rel="alternate" hreflang="en" href="https://wiki.miracinema.app/player/">
+  <link rel="alternate" hreflang="fr" href="https://wiki.miracinema.app/fr/player/">
+  <link rel="alternate" hreflang="x-default" href="https://wiki.miracinema.app/player/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mira">
+  <meta property="og:title" content="Le lecteur">
+  <meta property="og:description" content="Raccourcis, intros passées, image dans l’image, minuterie, réglages de l’image et du son, et lecture loin de la maison.">
+  <meta property="og:url" content="https://wiki.miracinema.app/fr/player/">
+  <meta property="og:image" content="https://wiki.miracinema.app/img/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../img/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+  <link rel="preload" href="../../fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/wiki.css">
+  <script src="../../js/wiki.js" defer></script>
+</head>
+<body class="wiki-page" data-search="../search.json" data-copy="Copier" data-copied="Copié" data-none="Rien trouvé pour">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="bar wrap">
+    <a class="brand" href="../" aria-label="Wiki de Mira, accueil"><img src="../../img/mark.svg" alt="" width="26" height="26">Mira <span class="kind">Wiki</span></a>
+    <nav aria-label="Mira">
+      <a href="https://miracinema.app/">Site</a>
+      <a href="https://miracinema.app/#download">Télécharger</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+    </nav>
+    <a class="lang" href="../../player/" hreflang="en" lang="en">EN</a>
+  </header>
+
+  <div class="wiki wrap">
+    <aside class="side">
+      <form class="find" role="search" hidden>
+        <label class="field"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#search"/></svg><span class="visually-hidden">Chercher dans le wiki</span><input type="search" placeholder="Chercher…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="found" aria-autocomplete="list"><kbd class="hint" aria-hidden="true">/</kbd></label>
+        <ul class="found" id="found" role="listbox" hidden></ul>
+        <p class="nothing" role="status"></p>
+      </form>
+      <details class="pages" open>
+        <summary>Pages<span class="where">Le lecteur</span></summary>
+        <nav aria-label="Pages"><ul><li><p class="group">Bien démarrer</p><ul><li><a href="../">Bienvenue</a></li><li><a href="../windows/">Windows</a></li><li><a href="../mac/">Mac</a></li><li><a href="../iphone/">iPhone et iPad</a></li></ul></li><li><p class="group">Ton serveur</p><ul><li><a href="../jellyfin/">Préparer Jellyfin</a></li><li><a href="../sign-in/">Se connecter</a></li><li><a href="../away/">Hors de chez toi</a></li></ul></li><li><p class="group">Regarder</p><ul><li><a href="../library/">Ta bibliothèque</a></li><li><a href="./" aria-current="page">Le lecteur</a></li><li><a href="../subtitles/">Audio et sous-titres</a></li><li><a href="../together/">Regarder ensemble</a></li></ul></li><li><p class="group">Aide</p><ul><li><a href="../settings/">Réglages</a></li><li><a href="../privacy/">Vie privée</a></li><li><a href="../troubleshooting/">Dépannage</a></li><li><a href="../faq/">Questions</a></li></ul></li></ul></nav>
+      </details>
+    </aside>
+
+    <main id="main" class="doc">
+      <header class="doc-head">
+        <p class="crumb">Regarder</p>
+        <h1>Le lecteur</h1>
+        <p class="lede">Raccourcis, intros passées, image dans l’image, minuterie, réglages de l’image et du son, et lecture loin de la maison.</p>
+        <ul class="platforms" aria-label="Pour"><li>Windows</li><li>Mac</li><li>iPhone</li></ul>
+      </header>
+      <nav class="toc" aria-label="Sur cette page"><p>Sur cette page</p><ol><li><a href="#les-commandes">Les commandes</a></li><li><a href="#intros-generiques-et-episode-suivant">Intros, génériques et épisode suivant</a></li><li><a href="#mini-lecteur-et-image-dans-l-image">Mini-lecteur et image dans l’image</a></li><li><a href="#minuterie">Minuterie</a></li><li><a href="#image-et-son">Image et son</a></li><li><a href="#loin-de-la-maison-la-qualite">Loin de la maison : la qualité</a></li></ol></nav>
+      <article class="prose">
+<p>Sous Windows et Mac, Mira lit avec <strong>mpv</strong>, dans sa propre fenêtre : presque tous les fichiers se lisent tels quels, avec leurs pistes audio, leurs sous-titres et leurs chapitres. Sur iPhone, Mira a son propre lecteur, construit sur celui d’Apple.</p>
+<h2 id="les-commandes">Les commandes<a class="anchor" href="#les-commandes" aria-label="Lien vers cette partie">#</a></h2>
+<p>La barre montre le titre et l’épisode à gauche, le chapitre et le temps à droite. Dessous : lecture/pause, épisode suivant et volume à gauche ; <strong>⋮</strong> (vitesse, minuterie, décalage des sous-titres, informations), audio et sous-titres, mini-lecteur, image dans l’image et plein écran à droite. Les commandes se cachent après quelques secondes sans bouger la souris.</p>
+<ul><li>La barre de lecture est découpée en chapitres ; le survol montre le temps, le chapitre et, quand Jellyfin les a préparés, un aperçu de l’image.</li><li>Le volume monte jusqu’à 200 % pour un titre enregistré trop bas : au-delà de 100 %, le son est amplifié puis limité, sans saturer.</li><li>Un clic sur l’image met en pause ou reprend, un double clic passe en plein écran. Un clic près des barres ne fait qu’afficher les commandes, jamais de pause par erreur.</li></ul>
+<h3 id="clavier">Clavier<a class="anchor" href="#clavier" aria-label="Lien vers cette partie">#</a></h3>
+<div class="table"><table><thead><tr><th scope="col">Action</th><th scope="col">Windows</th><th scope="col">Mac</th></tr></thead><tbody><tr><td>Lecture / pause</td><td><kbd>Espace</kbd> ou <kbd>K</kbd></td><td><kbd>Espace</kbd> ou <kbd>K</kbd></td></tr><tr><td>Reculer / avancer de 10 secondes</td><td><kbd>←</kbd> / <kbd>→</kbd>, <kbd>J</kbd> / <kbd>L</kbd></td><td><kbd>←</kbd> / <kbd>→</kbd></td></tr><tr><td>Reculer / avancer d’une minute</td><td><kbd>Maj</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td><td></td></tr><tr><td>Aller à 0 %, 10 %… 90 %</td><td><kbd>0</kbd> à <kbd>9</kbd></td><td></td></tr><tr><td>Volume</td><td><kbd>↑</kbd> / <kbd>↓</kbd>, molette</td><td><kbd>↑</kbd> / <kbd>↓</kbd></td></tr><tr><td>Couper le son</td><td><kbd>M</kbd></td><td><kbd>M</kbd></td></tr><tr><td>Sous-titres coupés / remis</td><td><kbd>C</kbd></td><td></td></tr><tr><td>Plein écran</td><td><kbd>F</kbd>, <kbd>F11</kbd>, double clic</td><td><kbd>F</kbd>, double clic</td></tr><tr><td>Mini-lecteur</td><td><kbd>I</kbd></td><td></td></tr><tr><td>Passer l’intro, le récap ou le générique</td><td><kbd>S</kbd></td><td><kbd>S</kbd></td></tr><tr><td>Épisode suivant</td><td><kbd>N</kbd></td><td><kbd>N</kbd></td></tr><tr><td>Revenir, quitter le plein écran</td><td><kbd>Échap</kbd></td><td><kbd>Échap</kbd></td></tr></tbody></table></div>
+<h3 id="sur-iphone">Sur iPhone<a class="anchor" href="#sur-iphone" aria-label="Lien vers cette partie">#</a></h3>
+<p>Touche l’image pour afficher les commandes. Double toucher sur un côté pour reculer ou avancer de 10 secondes (les touchers s’additionnent). Glisse vers le haut ou le bas à gauche pour la luminosité, à droite pour le volume, en travers pour te déplacer. Appui long pour lire en ×2, pincer pour remplir l’écran, glisser vers le bas pour réduire le lecteur. Le verrou écarte les touchers involontaires.</p>
+<h2 id="intros-generiques-et-episode-suivant">Intros, génériques et épisode suivant<a class="anchor" href="#intros-generiques-et-episode-suivant" aria-label="Lien vers cette partie">#</a></h2>
+<p>Les boutons <strong>Passer l’intro</strong>, <strong>Passer le générique</strong> et <strong>Passer le récap</strong> viennent des segments de Jellyfin (Jellyfin 10.10 ou plus récent, du serveur ou d’une extension comme Intro Skipper) ou des noms de chapitres du fichier. Avec <strong>Réglages → Lecture → Passer les intros et les récaps</strong>, Mira les passe sans demander, une fois chacun : revenir dedans les rejoue.</p>
+<p><strong>Épisode suivant</strong> apparaît pendant le générique de fin ou dans les 20 dernières secondes. Avec <strong>Enchaîner les épisodes</strong>, un compte à rebours de 10 secondes démarre ; <strong>Annuler</strong> reste sur cet épisode.</p>
+<p>Mira reprend un peu avant là où tu t’es arrêté, 5 secondes par défaut, pour retrouver le fil (<strong>Réglages → Lecture</strong>). <strong>Depuis le début</strong>, sur la fiche d’un titre, repart du début.</p>
+<h2 id="mini-lecteur-et-image-dans-l-image">Mini-lecteur et image dans l’image<a class="anchor" href="#mini-lecteur-et-image-dans-l-image" aria-label="Lien vers cette partie">#</a></h2>
+<ul><li><strong>Mini-lecteur</strong> : la vidéo continue dans un coin de la bibliothèque pendant que tu navigues. Fais-le glisser dans n’importe quel coin ; sous Windows, pousse-le au-delà du bord droit pour le ranger derrière un onglet.</li><li><strong>Image dans l’image</strong> (Windows et Mac) : la vidéo dans une petite fenêtre à elle, au-dessus de tes autres fenêtres, avec ses sous-titres. Sur iPhone, l’Image dans l’image d’Apple.</li></ul>
+<h2 id="minuterie">Minuterie<a class="anchor" href="#minuterie" aria-label="Lien vers cette partie">#</a></h2>
+<p>Dans le menu <strong>⋮</strong> du lecteur : pause dans 15 minutes, 30 minutes, 1 heure, ou à la fin de l’épisode. Sur iPhone, elle est sur la fiche du titre. Elle s’efface à la fermeture du lecteur.</p>
+<h2 id="image-et-son">Image et son<a class="anchor" href="#image-et-son" aria-label="Lien vers cette partie">#</a></h2>
+<ul><li><strong>Image</strong> (Réglages → Lecture, Windows et Mac) : <strong>Standard</strong> (le rendu de mpv, le plus léger), <strong>Cinéma</strong> (par défaut : mouvement fluide sur tout écran, pas de bandes dans les dégradés) et <strong>Maximale</strong> (avec la mise à l’échelle la plus fine). Si l’ordinateur perd des images, Mira descend d’un niveau tout seul et te le dit.</li><li><strong>Sortie audio</strong> (Windows, Réglages → Audio &amp; sous-titres) : le périphérique, le nombre de canaux, et <strong>Son envoyé à l’ampli tel quel</strong> pour un ampli ou une barre de son qui décode le Dolby et le DTS, Atmos compris. <strong>Tester la sortie audio</strong> joue un son sur chaque haut-parleur.</li><li><strong>Décalage de l’audio</strong> (menu ⋮) : si les lèvres et les voix ne collent pas, par pas de 0,1 s, jusqu’à la fermeture du lecteur.</li></ul>
+<h2 id="loin-de-la-maison-la-qualite">Loin de la maison : la qualité<a class="anchor" href="#loin-de-la-maison-la-qualite" aria-label="Lien vers cette partie">#</a></h2>
+<p>À la maison, Mira lit le fichier tel quel. Ailleurs, un film en 4K peut ne pas passer par ta connexion : <strong>Qualité</strong> (Réglages → Lecture et menu <strong>⋮</strong> du lecteur) fixe une limite, ou <strong>Auto</strong> mesure la connexion jusqu’à Jellyfin. Sous la limite, Jellyfin convertit le fichier pendant que tu regardes. Si la connexion tombe, Mira attend Jellyfin, rouvre le flux une fois là où il en était, et seulement ensuite dit qu’il ne peut pas lire.</p>
+<p>Convertir est lourd pour le serveur. Sur le PC de Jellyfin, Mira peut le confier à la carte graphique : <strong>Réglages → Entretien → Conversions par la carte graphique</strong>, essayé d’abord sur un de tes titres.</p>
+      </article>
+      <footer class="doc-foot">
+        <nav class="pager" aria-label="Pages"><a class="previous" href="../library/" rel="prev"><span>Précédent</span>Ta bibliothèque</a><a class="next" href="../subtitles/" rel="next"><span>Suivant</span>Audio et sous-titres</a></nav>
+        <p class="help"><a href="https://github.com/sasou-web/Mira/blob/main/wiki/fr/player.md"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#pencil"/></svg>Modifier cette page sur GitHub</a><a href="https://discord.gg/Bh3F6PDUvB"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#users"/></svg>Demander sur Discord</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="foot wrap">
+    <div class="sign">
+      <a class="brand" href="https://miracinema.app/"><img src="../../img/mark.svg" alt="" width="24" height="24">Mira</a>
+      <p>Libre et gratuit. Sans lien avec Jellyfin. Aucun film fourni.</p>
+    </div>
+    <nav aria-label="Links">
+      <a href="https://github.com/sasou-web/Mira">Code source</a>
+      <a href="https://discord.gg/Bh3F6PDUvB">Discord</a>
+      <a href="https://github.com/sasou-web/Mira/releases">Versions</a>
+      <a href="https://github.com/sasou-web/Mira/blob/main/SECURITY.md">Sécurité</a>
+      <a href="../../player/" hreflang="en" lang="en">English</a>
+    </nav>
+  </footer>
+</body>
+</html>
