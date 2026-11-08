@@ -62,7 +62,7 @@
         <p class="lede">Installer Mira sur un Mac avec l’image disque ou Homebrew, l’autoriser la première fois, et la laisser se mettre à jour.</p>
         <ul class="platforms" aria-label="Pour"><li>macOS 15 ou plus récent</li><li>puce Apple</li></ul>
       </header>
-      <nav class="toc" aria-label="Sur cette page"><p>Sur cette page</p><ol><li><a href="#avec-l-image-disque">Avec l’image disque</a></li><li><a href="#avec-homebrew">Avec Homebrew</a></li><li><a href="#autoriser-mira-la-premiere-fois">Autoriser Mira la première fois</a></li><li><a href="#premiere-connexion">Première connexion</a></li><li><a href="#mises-a-jour">Mises à jour</a></li><li><a href="#fenetre-et-menus">Fenêtre et menus</a></li><li><a href="#trackpad">Trackpad</a></li><li><a href="#repartir-de-zero">Repartir de zéro</a></li></ol></nav>
+      <nav class="toc" aria-label="Sur cette page"><p>Sur cette page</p><ol><li><a href="#avec-l-image-disque">Avec l’image disque</a></li><li><a href="#avec-homebrew">Avec Homebrew</a></li><li><a href="#autoriser-mira-la-premiere-fois">Autoriser Mira la première fois</a></li><li><a href="#premiere-connexion">Première connexion</a></li><li><a href="#mises-a-jour">Mises à jour</a></li><li><a href="#fenetre-et-menus">Fenêtre et menus</a></li><li><a href="#trackpad">Trackpad</a></li><li><a href="#films-en-hdr">Films en HDR</a></li><li><a href="#repartir-de-zero">Repartir de zéro</a></li></ol></nav>
       <article class="prose">
 <p>Mira pour Mac lit ta bibliothèque Jellyfin avec le même lecteur mpv que sous Windows. Il lui faut un Mac à puce Apple (M1 ou plus récent) sous macOS 15 Sequoia ou plus récent, et un serveur Jellyfin que tu as déjà : Mira pour Mac n’installe pas Jellyfin.</p>
 <h2 id="avec-l-image-disque">Avec l’image disque<a class="anchor" href="#avec-l-image-disque" aria-label="Lien vers cette partie">#</a></h2>
@@ -91,6 +91,10 @@
 <h2 id="trackpad">Trackpad<a class="anchor" href="#trackpad" aria-label="Lien vers cette partie">#</a></h2>
 <p>Mira suit les réglages de ton trackpad (défilement naturel, balayer entre les pages).</p>
 <ul><li>Dans la bibliothèque : deux doigts sur le côté pour revenir et avancer (la page suit tes doigts, comme dans Safari ; lâche avant mi-chemin pour rester), pincer pour changer la taille des affiches, clic forcé sur une affiche pour son menu.</li><li>Dans le lecteur : à gauche ou à droite pour avancer et reculer, en haut ou en bas pour le volume ; écarter deux doigts passe en plein écran, pincer en sort, puis réduit le lecteur en mini-lecteur.</li></ul>
+<h2 id="films-en-hdr">Films en HDR<a class="anchor" href="#films-en-hdr" aria-label="Lien vers cette partie">#</a></h2>
+<p>Sur Mac, Mira montre un film HDR (HDR10, HDR10+, HLG, Dolby Vision) en SDR : mpv le ramène (tone mapping) à la plage ordinaire avant l’écran. Les couleurs restent justes et Jellyfin ne convertit rien, mais la luminosité en plus du HDR est perdue, même sur un MacBook Pro ou un Pro Display XDR.</p>
+<p>C’est une limite de la façon dont Mira dessine la vidéo sur Mac (une vue OpenGL en 8 bits, sans la plage étendue du Mac), pas de ton fichier ni de ton écran. Dans le lecteur, <strong>⋮ → Informations</strong>, la ligne <strong>Couleurs</strong> le dit : « HDR10 → SDR (limite du rendu) ».</p>
+<aside class="callout note"><p class="label"><svg class="icon" aria-hidden="true"><use href="../../img/icons.svg#info"/></svg>À savoir</p><p>Sous Windows, Mira envoie le HDR tel quel à l’écran quand le HDR de Windows est allumé. Sur iPhone, le lecteur d’Apple montre le HDR et le Dolby Vision.</p></aside>
 <h2 id="repartir-de-zero">Repartir de zéro<a class="anchor" href="#repartir-de-zero" aria-label="Lien vers cette partie">#</a></h2>
 <p>Déconnecte-toi d’abord (<strong>Réglages → Compte &amp; serveur</strong>), quitte Mira, puis supprime <code>~/Library/Application Support/Mira</code>.</p>
       </article>

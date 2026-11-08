@@ -62,7 +62,7 @@
         <p class="lede">Install Mira on a Mac with the disk image or Homebrew, allow it the first time, and let it update itself.</p>
         <ul class="platforms" aria-label="For"><li>macOS 15 or later</li><li>Apple silicon</li></ul>
       </header>
-      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#with-the-disk-image">With the disk image</a></li><li><a href="#with-homebrew">With Homebrew</a></li><li><a href="#allow-mira-the-first-time">Allow Mira the first time</a></li><li><a href="#first-sign-in">First sign-in</a></li><li><a href="#updates">Updates</a></li><li><a href="#window-and-menus">Window and menus</a></li><li><a href="#trackpad">Trackpad</a></li><li><a href="#start-over">Start over</a></li></ol></nav>
+      <nav class="toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#with-the-disk-image">With the disk image</a></li><li><a href="#with-homebrew">With Homebrew</a></li><li><a href="#allow-mira-the-first-time">Allow Mira the first time</a></li><li><a href="#first-sign-in">First sign-in</a></li><li><a href="#updates">Updates</a></li><li><a href="#window-and-menus">Window and menus</a></li><li><a href="#trackpad">Trackpad</a></li><li><a href="#hdr-films">HDR films</a></li><li><a href="#start-over">Start over</a></li></ol></nav>
       <article class="prose">
 <p>Mira for Mac plays your Jellyfin library with the same mpv player as on Windows. It needs a Mac with Apple silicon (M1 or later) on macOS 15 Sequoia or later, and a Jellyfin server you already have: Mira for Mac does not install Jellyfin.</p>
 <h2 id="with-the-disk-image">With the disk image<a class="anchor" href="#with-the-disk-image" aria-label="Link to this section">#</a></h2>
@@ -91,6 +91,10 @@
 <h2 id="trackpad">Trackpad<a class="anchor" href="#trackpad" aria-label="Link to this section">#</a></h2>
 <p>Mira follows your trackpad settings (natural scrolling, swipe between pages).</p>
 <ul><li>In the library: swipe with two fingers to go back and forward (the page follows your fingers, as in Safari; let go early to stay), pinch to change the size of the posters, force click a poster for its menu.</li><li>In the player: swipe left or right to seek, up or down for the volume; spread two fingers for full screen, pinch to leave it, then to shrink the player to the mini player.</li></ul>
+<h2 id="hdr-films">HDR films<a class="anchor" href="#hdr-films" aria-label="Link to this section">#</a></h2>
+<p>On a Mac, Mira shows an HDR film (HDR10, HDR10+, HLG, Dolby Vision) in SDR: mpv converts it (tone mapping) to the ordinary range before it reaches the screen. The colours stay right and nothing is converted by Jellyfin, but the extra brightness of HDR is lost, even on a MacBook Pro or a Pro Display XDR.</p>
+<p>This is a limit of how Mira draws the video on a Mac (an 8-bit OpenGL view, without the Mac's extended range), not of your file or your screen. In the player, <strong>⋮ → Info</strong>, the <strong>Colours</strong> line says it: &quot;HDR10 → SDR (rendering limit)&quot;.</p>
+<aside class="callout note"><p class="label"><svg class="icon" aria-hidden="true"><use href="../img/icons.svg#info"/></svg>Note</p><p>On Windows, Mira sends HDR to the screen as it is when Windows' HDR is on. On iPhone, Apple's player shows HDR and Dolby Vision.</p></aside>
 <h2 id="start-over">Start over<a class="anchor" href="#start-over" aria-label="Link to this section">#</a></h2>
 <p>Sign out first (<strong>Settings → Account &amp; server</strong>), quit Mira, then delete <code>~/Library/Application Support/Mira</code>.</p>
       </article>
