@@ -51,7 +51,7 @@
       </form>
       <details class="pages" open>
         <summary>Pages<span class="where">Mac</span></summary>
-        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="./" aria-current="page">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
+        <nav aria-label="Pages"><ul><li><p class="group">Start</p><ul><li><a href="../">Welcome</a></li><li><a href="../windows/">Windows</a></li><li><a href="./" aria-current="page">Mac</a></li><li><a href="../iphone/">iPhone and iPad</a></li></ul></li><li><p class="group">Your server</p><ul><li><a href="../jellyfin/">Set up Jellyfin</a></li><li><a href="../sign-in/">Sign in</a></li><li><a href="../away/">Away from home</a></li></ul></li><li><p class="group">Watching</p><ul><li><a href="../library/">Your library</a></li><li><a href="../player/">The player</a></li><li><a href="../subtitles/">Audio and subtitles</a></li><li><a href="../together/">Watch together</a></li></ul></li><li><p class="group">Help</p><ul><li><a href="../settings/">Settings</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../verify/">Verify</a></li><li><a href="../troubleshooting/">Troubleshooting</a></li><li><a href="../faq/">FAQ</a></li></ul></li></ul></nav>
       </details>
     </aside>
 
@@ -76,7 +76,7 @@
 <ol><li>Open Mira, then close the message.</li><li>Go to <strong>System Settings → Privacy &amp; Security</strong>.</li><li>At the bottom, next to &quot;Mira was blocked&quot;, click <strong>Open Anyway</strong>, then confirm.</li></ol>
 <p>If macOS says Mira is &quot;damaged&quot;, or the button does not appear, type this in Terminal:</p>
 <div class="code"><pre data-language="sh"><code>xattr -dr com.apple.quarantine /Applications/Mira.app</code></pre></div>
-<p>It only removes the &quot;downloaded from the Internet&quot; mark from Mira. It changes no security setting of your Mac.</p>
+<p>It only removes the &quot;downloaded from the Internet&quot; mark from Mira. It changes no security setting of your Mac. To check the image before opening it: <a href="../verify/">Verify your download</a>.</p>
 <h2 id="first-sign-in">First sign-in<a class="anchor" href="#first-sign-in" aria-label="Link to this section">#</a></h2>
 <p>Type your server's address (<code>192.168.1.20</code>, <code>nas:8096</code>…), your username and password. Mira finds the right port and protocol. Away from home, use the server's Tailscale address, or let <a href="../away/">Built-in Tailscale</a> reach it without the Tailscale app.</p>
 <p>Your password is never stored: Mira keeps only the session Jellyfin opens, in your Mac's keychain (item &quot;Mira&quot;). The rest is in <code>~/Library/Application Support/Mira</code>, readable by your macOS account only.</p>
