@@ -68,14 +68,14 @@
 <h2 id="1-comparer-le-sha-256">1. Comparer le SHA-256<a class="anchor" href="#1-comparer-le-sha-256" aria-label="Lien vers cette partie">#</a></h2>
 <p>Chaque fichier d’une version a son <code>.sha256</code> à côté de lui, publié au même moment, dans une version qui ne peut plus être modifiée (releases immuables de GitHub : une fois sortie, personne ne peut remplacer un fichier, même pas le mainteneur).</p>
 <p>Windows, dans PowerShell :</p>
-<div class="code"><pre data-language="powershell"><code>Get-FileHash .\Mira-0.9.5-win-x64-setup.exe -Algorithm SHA256</code></pre></div>
+<div class="code"><pre data-language="powershell"><code>Get-FileHash .\Mira-0.9.6-win-x64-setup.exe -Algorithm SHA256</code></pre></div>
 <p>Mac, dans le Terminal :</p>
-<div class="code"><pre data-language="sh"><code>shasum -a 256 ~/Downloads/Mira-0.9.5-mac-arm64.dmg</code></pre></div>
+<div class="code"><pre data-language="sh"><code>shasum -a 256 ~/Downloads/Mira-0.9.6-mac-arm64.dmg</code></pre></div>
 <p>La valeur doit être celle du fichier <code>.sha256</code>. Pareil pour l’<code>.ipa</code> de l’iPhone.</p>
 <h2 id="2-verifier-d-ou-il-vient">2. Vérifier d’où il vient<a class="anchor" href="#2-verifier-d-ou-il-vient" aria-label="Lien vers cette partie">#</a></h2>
 <p>Aucun fichier d’une version n’est compilé sur un PC : GitHub Actions construit chacun depuis le commit de la version, au grand jour (<a href="https://github.com/sasou-web/Mira/tree/main/.github/workflows" rel="noopener">les workflows</a>), et signe pour lui une attestation de construction. Avec <a href="https://cli.github.com/" rel="noopener">GitHub CLI</a> :</p>
-<div class="code"><pre data-language="sh"><code>gh attestation verify Mira-0.9.5-win-x64-setup.exe -R sasou-web/Mira
-gh release verify v0.9.5 -R sasou-web/Mira</code></pre></div>
+<div class="code"><pre data-language="sh"><code>gh attestation verify Mira-0.9.6-win-x64-setup.exe -R sasou-web/Mira
+gh release verify v0.9.6 -R sasou-web/Mira</code></pre></div>
 <p>La première ligne nomme le workflow et le commit qui ont produit ton fichier ; la seconde vérifie la version entière. Les attestations commencent avec la version qui suit la 0.9.5.</p>
 <h2 id="3-le-chercher-sur-virustotal">3. Le chercher sur VirusTotal<a class="anchor" href="#3-le-chercher-sur-virustotal" aria-label="Lien vers cette partie">#</a></h2>
 <p>Le workflow de publication envoie l’installateur Windows, le portable et l’image disque Mac à <a href="https://www.virustotal.com/" rel="noopener">VirusTotal</a>, où quelque soixante-dix antivirus les analysent. Ouvre <code>https://www.virustotal.com/gui/file/</code> suivi du SHA-256 de l’étape 1. Si le fichier y est inconnu, envoie-le toi-même : il est déjà public.</p>
