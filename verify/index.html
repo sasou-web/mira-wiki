@@ -68,14 +68,14 @@
 <h2 id="1-compare-the-sha-256">1. Compare the SHA-256<a class="anchor" href="#1-compare-the-sha-256" aria-label="Link to this section">#</a></h2>
 <p>Every file of a release has a <code>.sha256</code> next to it, published at the same moment, in a release that can no longer be changed (GitHub's immutable releases: once out, nobody can replace a file, not even the maintainer).</p>
 <p>Windows, in PowerShell:</p>
-<div class="code"><pre data-language="powershell"><code>Get-FileHash .\Mira-0.9.7-win-x64-setup.exe -Algorithm SHA256</code></pre></div>
+<div class="code"><pre data-language="powershell"><code>Get-FileHash .\Mira-0.9.8-win-x64-setup.exe -Algorithm SHA256</code></pre></div>
 <p>Mac, in Terminal:</p>
-<div class="code"><pre data-language="sh"><code>shasum -a 256 ~/Downloads/Mira-0.9.7-mac-arm64.dmg</code></pre></div>
+<div class="code"><pre data-language="sh"><code>shasum -a 256 ~/Downloads/Mira-0.9.8-mac-arm64.dmg</code></pre></div>
 <p>The value must match the one in the <code>.sha256</code> file. The same goes for the iPhone <code>.ipa</code>.</p>
 <h2 id="2-check-where-it-was-built">2. Check where it was built<a class="anchor" href="#2-check-where-it-was-built" aria-label="Link to this section">#</a></h2>
 <p>No file of a release is built on a PC: GitHub Actions builds each one from the release's commit, in the open (<a href="https://github.com/sasou-web/Mira/tree/main/.github/workflows" rel="noopener">the workflows</a>), and signs a build attestation for it. With <a href="https://cli.github.com/" rel="noopener">GitHub CLI</a>:</p>
-<div class="code"><pre data-language="sh"><code>gh attestation verify Mira-0.9.7-win-x64-setup.exe -R sasou-web/Mira
-gh release verify v0.9.7 -R sasou-web/Mira</code></pre></div>
+<div class="code"><pre data-language="sh"><code>gh attestation verify Mira-0.9.8-win-x64-setup.exe -R sasou-web/Mira
+gh release verify v0.9.8 -R sasou-web/Mira</code></pre></div>
 <p>The first line names the workflow and the commit that produced your file; the second checks the release as a whole. Attestations begin with the version after 0.9.5.</p>
 <h2 id="3-look-it-up-on-virustotal">3. Look it up on VirusTotal<a class="anchor" href="#3-look-it-up-on-virustotal" aria-label="Link to this section">#</a></h2>
 <p>The release workflow sends the Windows installer, the portable and the Mac disk image to <a href="https://www.virustotal.com/" rel="noopener">VirusTotal</a>, where some seventy antivirus engines scan them. Open <code>https://www.virustotal.com/gui/file/</code> followed by the SHA-256 from step 1. If the file is unknown there, upload it yourself: it is public already.</p>
